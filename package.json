@@ -21,6 +21,7 @@
     "url": "https://github.com/gibatronic/vigilia.git"
   },
   "scripts": {
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "version": "0.0.0"
 }
