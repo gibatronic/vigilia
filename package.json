@@ -1,5 +1,8 @@
 {
   "author": "Gibran Malheiros <gibatronic@gmail.com> (http://gibatronic.github.io/)",
+  "bin": {
+    "vigilia": "main.js"
+  },
   "bugs": {
     "url": "https://github.com/gibatronic/vigilia/issues"
   },
@@ -7,7 +10,6 @@
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": { },
   "homepage": "https://github.com/gibatronic/vigilia",
-  "main": "main.js",
   "name": "vigilia",
   "repository": {
     "type": "git",
