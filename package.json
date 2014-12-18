@@ -6,9 +6,14 @@
   "bugs": {
     "url": "https://github.com/gibatronic/vigilia/issues"
   },
-  "dependencies": { },
+  "dependencies": {
+    "watch": "^0.13.0"
+  },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
-  "devDependencies": { },
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "jasmine": "^2.1.1"
+  },
   "homepage": "https://github.com/gibatronic/vigilia",
   "name": "vigilia",
   "repository": {
