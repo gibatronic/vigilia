@@ -7,7 +7,8 @@
     "url": "https://github.com/gibatronic/vigilia/issues"
   },
   "dependencies": {
-    "watch": "^0.13.0"
+    "watch": "^0.13.0",
+    "yargs": "^1.3.3"
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": {
