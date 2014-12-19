@@ -1,37 +1,93 @@
 #!/usr/bin/env node
 
-var bind,
+var debounce = require('debounce'),
+    Gaze = require('gaze').Gaze,
     grab,
-    options = [ ],
-    parse,
+    os = require('os'),
+    setup,
+    spawn = require('child_process').spawn,
     start,
     stop,
-    watch = require('watch');
+    Vigilia,
+    vigiliae = [ ];
 
-bind = function() {
+setup = function() {
   process.on('SIGINT', stop);
-};
 
-grab = function() {
-  process.argv.slice(2).forEach(parse);
-};
+  process.argv.slice(2).forEach(function(association, index, associations) {
+    association = association.split(':');
 
-parse = function(association, index, associations) {
-  var option = { };
-
-  association = association.split(':');
-
-  console.log(association);
+    vigiliae.push(new Vigilia(association[0], association[1]));
+  });
 };
 
 start = function() {
-
+  vigiliae.forEach(function(vigilia, index, vigiliae) {
+    vigilia.start();
+  });
 };
 
 stop = function() {
+  vigiliae.forEach(function(vigilia, index, vigiliae) {
+    vigilia.stop();
+  });
 
+  process.stdout.write(' bye' + os.EOL);
+  process.exit(0);
 };
 
-grab();
-bind();
+Vigilia = function(pattern, command) {
+  this.command = command || null;
+  this.pattern = pattern || null;
+  this.watcher = null;
+
+  if (!this.command) {
+    throw new Error('no command was given to vigilia');
+  }
+
+  if (!this.pattern) {
+    throw new Error('no pattern was given to vigilia');
+  }
+};
+
+Vigilia.prototype = {
+  log: function(stream, data) {
+    process[stream].write(data.toString());
+  },
+
+  run: function(event, filepath) {
+    var action,
+        options,
+        pattern = /^([^ ]+)\s*(.*)$/;
+
+    console.log(this.pattern, event, filepath);
+
+    command = this.command.replace(pattern, '$1');
+    options = this.command.replace(pattern, '$2');
+    action = spawn(command, [options]);
+
+    action.stderr.on('data', this.log.bind(this, 'stderr'));
+    action.stdout.on('data', this.log.bind(this, 'stdout'));
+  },
+ 
+  start: function() {
+    if (this.watcher) {
+      return;
+    }
+
+    this.watcher = new Gaze(this.pattern);
+    this.watcher.on('all', debounce(this.run.bind(this), 200, true));
+  },
+
+  stop: function() {
+    if (!this.watcher) {
+      return;
+    }
+
+    this.watcher.close();
+    this.watcher = null;
+  }
+};
+
+setup();
 start();
