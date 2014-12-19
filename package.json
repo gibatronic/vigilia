@@ -7,11 +7,11 @@
     "url": "https://github.com/gibatronic/vigilia/issues"
   },
   "dependencies": {
+    "debounce": "^1.0.0",
     "gaze": "^0.6.4"
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": {
-    "coffee-script": "^1.8.0",
     "jasmine": "^2.1.1"
   },
   "homepage": "https://github.com/gibatronic/vigilia",
