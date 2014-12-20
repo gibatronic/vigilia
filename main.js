@@ -73,8 +73,12 @@ Vigilia.prototype = {
       return;
     }
 
-    this.watcher = new Gaze(this.pattern);
+    this.watcher = new Gaze(this.pattern, { }, this.started.bind(this));
     this.watcher.on('all', debounce(this.run.bind(this), 200, true));
+  },
+
+  started: function() {
+    process.stdout.write('vigilia is up and waiting...' + os.EOL);
   },
 
   stop: function() {
