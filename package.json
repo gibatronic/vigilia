@@ -12,7 +12,8 @@
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": {
-    "mocha": "^2.0.1"
+    "mocha": "^2.0.1",
+    "q-io": "^1.11.6"
   },
   "homepage": "https://github.com/gibatronic/vigilia",
   "name": "vigilia",
@@ -21,6 +22,8 @@
     "url": "https://github.com/gibatronic/vigilia.git"
   },
   "scripts": {
+    "posttest": "rm -fr sandbox",
+    "pretest": "mkdir -p sandbox",
     "test": "node_modules/mocha/bin/mocha"
   },
   "version": "0.0.0"
