@@ -1,9 +1,12 @@
 {
-  "author": "Gibran Malheiros <gibatronic@gmail.com> (http://gibatronic.github.io/)",
-  "bin": {
-    "vigilia": "main.js"
+  "author": {
+    "email": "gibatronic@gmail.com",
+    "name": "Gibran Malheiros",
+    "url": "http://gibatronic.github.io/"
   },
+  "bin": "main.js",
   "bugs": {
+    "email": "gibatronic@gmail.com",
     "url": "https://github.com/gibatronic/vigilia/issues"
   },
   "dependencies": {
@@ -16,6 +19,15 @@
     "q-io": "^1.11.6"
   },
   "homepage": "https://github.com/gibatronic/vigilia",
+  "keywords": [
+    "command",
+    "cli",
+    "run",
+    "npm scripts",
+    "trigger",
+    "watch"
+  ],
+  "license": "MIT",
   "name": "vigilia",
   "repository": {
     "type": "git",
