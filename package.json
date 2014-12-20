@@ -11,6 +11,9 @@
     "gaze": "~0.5.1"
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
   "homepage": "https://github.com/gibatronic/vigilia",
   "name": "vigilia",
   "repository": {
@@ -18,7 +21,7 @@
     "url": "https://github.com/gibatronic/vigilia.git"
   },
   "scripts": {
-    "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
+    "test": "node_modules/mocha/bin/mocha"
   },
   "version": "0.0.0"
 }
