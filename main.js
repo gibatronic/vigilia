@@ -60,8 +60,6 @@ Vigilia.prototype = {
         options,
         pattern = /^([^ ]+)\s*(.*)$/;
 
-    console.log(this.pattern, event, filepath);
-
     command = this.command.replace(pattern, '$1');
     options = this.command.replace(pattern, '$2');
     action = spawn(command, [options]);
