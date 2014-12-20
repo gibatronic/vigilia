@@ -51,10 +51,6 @@ Vigilia = function(pattern, command) {
 };
 
 Vigilia.prototype = {
-  log: function(stream, data) {
-    process[stream].write(data.toString());
-  },
-
   run: function(event, filepath) {
     var action,
         options,
@@ -62,10 +58,10 @@ Vigilia.prototype = {
 
     command = this.command.replace(pattern, '$1');
     options = this.command.replace(pattern, '$2');
-    action = spawn(command, [options]);
 
-    action.stderr.on('data', this.log.bind(this, 'stderr'));
-    action.stdout.on('data', this.log.bind(this, 'stdout'));
+    action = spawn(command, [options], {
+      stdio: 'inherit'
+    });
   },
  
   start: function() {
