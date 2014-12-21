@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var os = require('os'),
+    setup,
+    start,
+    stop,
+    Vigilia = require('../lib/vigilia'),
+    vigiliae = [ ];
+
+setup = function() {
+  process.on('SIGINT', stop);
+
+  process.argv.slice(2).forEach(function(association, index, associations) {
+    association = association.split(':');
+
+    vigiliae.push(new Vigilia(association[0], association[1]));
+  });
+};
+
+start = function() {
+  vigiliae.forEach(function(vigilia, index, vigiliae) {
+    vigilia.start();
+  });
+
+  process.stdout.write('vigilia up and waiting...' + os.EOL);
+};
+
+stop = function() {
+  vigiliae.forEach(function(vigilia, index, vigiliae) {
+    vigilia.stop();
+  });
+
+  process.stdout.write(' bye' + os.EOL);
+  process.exit(0);
+};
+
+setup();
+start();

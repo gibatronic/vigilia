@@ -4,7 +4,7 @@
     "name": "Gibran Malheiros",
     "url": "http://gibatronic.github.io/"
   },
-  "bin": "main.js",
+  "bin": "bin/vigilia",
   "bugs": {
     "email": "gibatronic@gmail.com",
     "url": "https://github.com/gibatronic/vigilia/issues"
