@@ -1,20 +1,52 @@
 #!/usr/bin/env node
 
-var os = require('os'),
+var help,
+    os = require('os'),
+    run,
     setup,
+    spawn = require('child_process').spawn,
     start,
     stop,
+    version,
     Vigilia = require('../lib/vigilia'),
     vigiliae = [ ];
 
+help = function() {
+  var man = spawn('man', ['man/vigilia.1'], {
+    detached: true,
+    stdio: 'inherit'
+  });
+}
+
 setup = function() {
+  var hasHelp,
+      hasVersion,
+      options = process.argv.slice(2);
+
+  if (!options.length) {
+    return help;
+  }
+
+  hasHelp = options.indexOf('-h') != -1 || options.indexOf('--help') != -1;
+  hasVersion = options.indexOf('-v') != -1 || options.indexOf('--version') != -1;
+
+  if (hasHelp) {
+    return help;
+  }
+
+  if (hasVersion) {
+    return version;
+  }
+
   process.on('SIGINT', stop);
 
-  process.argv.slice(2).forEach(function(association, index, associations) {
+  options.forEach(function(association, index, associations) {
     association = association.split(':');
 
     vigiliae.push(new Vigilia(association[0], association[1]));
   });
+
+  return start;
 };
 
 start = function() {
@@ -34,5 +66,11 @@ stop = function() {
   process.exit(0);
 };
 
-setup();
-start();
+version = function() {
+  var manifest = require('../package');
+
+  process.stdout.write('v' + manifest.version + os.EOL);
+  process.exit(0);
+};
+
+setup()();

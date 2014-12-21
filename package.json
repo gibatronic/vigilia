@@ -28,6 +28,7 @@
     "watch"
   ],
   "license": "MIT",
+  "man": "man/vigilia.1",
   "name": "vigilia",
   "repository": {
     "type": "git",

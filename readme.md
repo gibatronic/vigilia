@@ -4,7 +4,7 @@
 
 simple command line tool to watch and trigger multiple combinations of paths and commands.
 
-## Intended usage
+## Usage
 
 ```sh
 npm install vigilia --save-dev
@@ -13,7 +13,7 @@ npm install vigilia --save-dev
 in your `makefile` or `package.json` declare the files you want to watch and the command that shall be run whenever something changes:
 
 ```
-node_modules/vigilia/bin/vigilia pattern:command ...
+node_modules/vigilia/bin/vigilia [options] pattern:command ...
 ```
 
 for example, in a `package.json`:
@@ -35,3 +35,13 @@ npm run watch
 ```
 
 see? no more [grunt](http://gruntjs.com/), [gulp](http://gulpjs.com/) or even [make](https://www.gnu.org/software/make/) if you wish.
+
+### Options
+
+* `-h` `--help`
+  <br>
+  show vigilia's man page
+
+* `-v` `--version`
+  <br>
+  show vigilia's version

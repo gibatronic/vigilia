@@ -1,0 +1,50 @@
+.TH VIGILIA "1" "" "" ""
+.SH NAME
+vigilia
+.SH SYNOPSIS
+.PP
+\fBvigilia\fR [\fIoptions\fR] \fIpattern\fR:\fIcommand\fR \fI...\fR
+.SH DESCRIPTION
+.PP
+simple command line tool to watch and trigger multiple combinations of paths and commands.
+.SH OPTIONS
+.TP
+.B -h --help
+show this help
+.TP
+.B -v --version
+show vigilia's version
+.SH USAGE
+.PP
+.nf
+npm install vigilia --save-dev
+.fi
+.PP
+in your \fBmakefile\fR or \fBpackage.json\fR declare the files you want to watch and the command that shall be run whenever something changes, for example, in a \fBpackage.json\fR:
+.PP
+.RS 2
+.nf
+{
+  "scripts": {
+    "scripts": "...",
+    "styles": "...",
+    "watch": "node_modules/vigilia/bin/vigilia 'scripts/**/*.js':'npm run scripts' 'styles/**/*.scss':'npm run styles'"
+  }
+}
+.fi
+.PP
+then start it with:
+.PP
+.RS 2
+.nf
+npm run watch
+.fi
+.RE
+.PP
+see? no more grunt, gulp or even make if you wish.
+.SH BUGS
+.PP
+\fIhttps://github.com/gibatronic/vigilia/issues\fR
+.SH AUTHOR
+.PP
+Gibran Malheiros <\fIgibatronic@gmail.com\fR>
