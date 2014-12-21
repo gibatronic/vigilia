@@ -1,4 +1,5 @@
 .gitignore
 .npmignore
+jasmine.json
 readme.md
 test

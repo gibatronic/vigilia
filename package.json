@@ -15,8 +15,8 @@
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": {
-    "mocha": "^2.0.1",
-    "q-io": "^1.11.6"
+    "jasmine": "^2.1.1",
+    "rewire": "^2.1.3"
   },
   "homepage": "https://github.com/gibatronic/vigilia",
   "keywords": [
@@ -34,9 +34,7 @@
     "url": "https://github.com/gibatronic/vigilia.git"
   },
   "scripts": {
-    "posttest": "rm -fr sandbox",
-    "pretest": "mkdir -p sandbox",
-    "test": "node_modules/mocha/bin/mocha"
+    "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
   },
   "version": "0.0.1"
 }
