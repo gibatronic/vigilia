@@ -1,4 +1,4 @@
-# Vigilia
+![Vigilia](http://gibatronic.github.io/vigilia/etc/vigilia.svg)
 
 > from the latin vigilia */wiˈɡi.li.a/*, watch.
 
