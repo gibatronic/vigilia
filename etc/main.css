@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body, h1, p {
+  margin: 0;
+}
+
+h1 {
+  padding: 0;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  min-width: 728px;
+  height: auto;
+}
+
+.header-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('vigilia.svg');
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  width: auto;
+  height: auto;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 728px;
+  height: 225px;
+}
