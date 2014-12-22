@@ -13,7 +13,7 @@ npm install vigilia --save-dev
 in your `makefile` or `package.json` declare the files you want to watch and the command that shall be run whenever something changes:
 
 ```
-node_modules/vigilia/bin/vigilia [options] pattern:command ...
+vigilia [options] pattern:command ...
 ```
 
 for example, in a `package.json`:
