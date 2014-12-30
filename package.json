@@ -37,5 +37,5 @@
   "scripts": {
     "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
