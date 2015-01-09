@@ -12,7 +12,7 @@ var help,
     vigiliae = [ ];
 
 help = function() {
-  var man = spawn('man', ['man/vigilia.1'], {
+  spawn('man', ['man/vigilia.1'], {
     detached: true,
     stdio: 'inherit'
   });
