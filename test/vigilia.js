@@ -40,8 +40,8 @@ describe("vigilia", function() {
     };
 
     spawn = function(command, args, options) {
-      expect(command).toBe('command');
-      expect(args).toEqual(['option']);
+      expect(command).toBe('sh');
+      expect(args).toEqual(['-c', 'command option']);
 
       done();
     };
