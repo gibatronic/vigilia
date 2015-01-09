@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "debounce": "^1.0.0",
-    "gaze": "~0.5.1",
-    "shell-escape": "^0.1.0"
+    "gaze": "~0.5.1"
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": {
