@@ -18,6 +18,10 @@
     "jasmine": "^2.4.1",
     "rewire": "^2.5.1"
   },
+  "engines": {
+    "node": "^4.0.0",
+    "npm": "^3.0.0"
+  },
   "homepage": "https://github.com/gibatronic/vigilia",
   "keywords": [
     "command",
