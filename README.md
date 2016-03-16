@@ -1,8 +1,8 @@
 ![Vigilia](http://gibatronic.github.io/vigilia/etc/vigilia.svg)
 
-> from the latin vigilia */wiˈɡi.li.a/*, watch.
+> From the latin vigilia */wiˈɡi.li.a/*, watch.
 
-simple command line tool to watch and trigger multiple combinations of paths and commands.
+Simple command line tool to watch and trigger multiple combinations of paths and commands.
 
 [![Build Status](https://travis-ci.org/gibatronic/vigilia.svg?branch=master)](https://travis-ci.org/gibatronic/vigilia) ![Downloads](https://img.shields.io/npm/dt/vigilia.svg) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gibatronic/vigilia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -12,13 +12,13 @@ simple command line tool to watch and trigger multiple combinations of paths and
 npm install vigilia --save-dev
 ```
 
-in your `makefile` or `package.json` declare the files you want to watch and the command that shall be run whenever something changes:
+In your `makefile` or `package.json` declare the files you want to watch and the command that shall be run whenever something changes:
 
 ```
 vigilia [options] pattern:command ...
 ```
 
-for example, in a `package.json`:
+For example, in a `package.json`:
 
 ```json
 {
@@ -30,20 +30,20 @@ for example, in a `package.json`:
 }
 ```
 
-then start it with:
+Then start it with:
 
 ```sh
 npm run watch
 ```
 
-see? no more [grunt](http://gruntjs.com/), [gulp](http://gulpjs.com/) or even [make](https://www.gnu.org/software/make/) if you wish.
+See? No more [grunt](http://gruntjs.com/), [gulp](http://gulpjs.com/) or even [make](https://www.gnu.org/software/make/) if you wish.
 
 ### Options
 
 * `-h` `--help`
   <br>
-  show vigilia's man page
+  Show vigilia's man page
 
 * `-v` `--version`
   <br>
-  show vigilia's version
+  Show vigilia's version
