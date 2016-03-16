@@ -2,48 +2,147 @@
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
+a {
+  color: #4078C0;
+  text-decoration: none;
 }
 
-body, h1, p {
+a:active, a:hover {
+  text-decoration: underline;
+}
+
+article {
+  position: relative;
+  margin: 2rem auto;
+  opacity: 1;
+  padding: 0 1rem;
+  transform: translateY(0);
+  transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
+  width: 100%;
+  max-width: 63.25rem;
+  z-index: 0;
+}
+
+blockquote {
+  border-left: 4px solid #DDD;
+  color: #777;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+blockquote p {
   margin: 0;
 }
 
-h1 {
-  padding: 0;
+body {
+  margin: 0;
 }
 
-.header {
+body:before {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  min-width: 728px;
-  height: auto;
-}
-
-.header-link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('vigilia.svg');
-  display: block;
-  overflow: hidden;
-  text-indent: 100%;
-  width: auto;
-  height: auto;
-}
-
-.header-title {
-  position: absolute;
-  top: 50%;
+  top: 2rem;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 728px;
-  height: 225px;
+  background-image: url('https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif');
+  background-size: cover;
+  content: '';
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -1rem);
+  transition: opacity 0.2s, transform 0.2s;
+  width: 64px;
+  height: 64px;
+}
+
+code {
+  background-color: #F7F7F7;
+  border-radius: 3px;
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+h2 {
+  border-bottom: 1px solid #EEE;
+  font-size: 1.75rem;
+  line-height: 1.225;
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.43;
+}
+
+html {
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+p a:only-child {
+  display: block;
+  pointer-events: none;
+}
+
+p a:only-child img:only-child {
+  display: block;
+  width: 100%;
+}
+
+pre {
+  background-color: #F7F7F7;
+  border-radius: 3px;
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 1rem;
+}
+
+ul {
+  margin: 1rem 0;
+  padding: 0 0 0 2rem;
+}
+
+.fork-me {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  opacity: 0.8;
+  outline: 0;
+  transform-origin: 100% 0;
+  transform: rotate(45deg) translateX(50%);
+  width: 120px;
+  height: 58px;
+  z-index: 5;
+}
+
+.fork-me:hover {
+  opacity: 1;
+}
+
+.fork-me__icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  fill: #333;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 38px;
+}
+
+.loading:before {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.loading article {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.25rem);
 }
