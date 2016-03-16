@@ -111,23 +111,25 @@ ul {
   position: fixed;
   top: 0;
   right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
   display: block;
-  opacity: 0.8;
+  opacity: 1;
   outline: 0;
-  transform-origin: 100% 0;
+  transition: background-color 0.2s, opacity 0.2s 0.4s;
   transform: rotate(45deg) translateX(50%);
-  width: 120px;
-  height: 58px;
+  transform-origin: 100% 0;
+  width: 140px;
+  height: 68px;
   z-index: 5;
 }
 
 .fork-me:hover {
-  opacity: 1;
+  background-color: rgba(64, 120, 192, 0.6);
 }
 
 .fork-me__icon {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 50%;
   display: block;
   fill: #333;
@@ -145,4 +147,9 @@ ul {
   opacity: 0;
   visibility: hidden;
   transform: translateY(0.25rem);
+}
+
+.loading .fork-me {
+  opacity: 0;
+  visibility: hidden;
 }
