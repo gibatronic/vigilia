@@ -54,7 +54,7 @@ start = function() {
     vigilia.start();
   });
 
-  process.stdout.write('vigilia up and waiting...' + os.EOL);
+  process.stdout.write('vigilia is up and watching...' + os.EOL);
 };
 
 stop = function() {

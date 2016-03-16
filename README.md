@@ -4,7 +4,7 @@
 
 simple command line tool to watch and trigger multiple combinations of paths and commands.
 
-[![Build Status](https://travis-ci.org/gibatronic/vigilia.svg?branch=master)](https://travis-ci.org/gibatronic/vigilia) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gibatronic/vigilia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/gibatronic/vigilia.svg?branch=master)](https://travis-ci.org/gibatronic/vigilia) ![Downloads](https://img.shields.io/npm/dt/vigilia.svg) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gibatronic/vigilia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Usage
 

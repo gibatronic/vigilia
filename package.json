@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "debounce": "^1.0.0",
-    "gaze": "~0.5.1"
+    "gaze": "^0.5.2"
   },
   "description": "simple command line tool to watch and trigger multiple combinations of paths and commands",
   "devDependencies": {
-    "jasmine": "^2.1.1",
-    "rewire": "^2.1.3"
+    "jasmine": "^2.4.1",
+    "rewire": "^2.5.1"
+  },
+  "engines": {
+    "node": "^4.0.0",
+    "npm": "^3.0.0"
   },
   "homepage": "https://github.com/gibatronic/vigilia",
   "keywords": [
@@ -37,5 +41,5 @@
   "scripts": {
     "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
   },
-  "version": "0.1.0"
+  "version": "1.0.0"
 }
