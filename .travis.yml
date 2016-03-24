@@ -7,3 +7,9 @@ notifications:
   email:
     on_success: never
     on_failure: always
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/cafc873d411a6800e353
+    on_success: change
+    on_failure: always
+    on_start: never
